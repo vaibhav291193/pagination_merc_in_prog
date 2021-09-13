@@ -1,0 +1,263 @@
+/* 
+Do not delete the following comment. It is essential for tracking purposes.
+#Merc2021DoNotDelete 
+*/
+  
+.cpc-control-select {
+	position: relative;
+	margin-bottom: 0;
+	width: 100%;
+   	max-width: 368px;
+	/* Pagination changes */
+	display: inline;
+	margin-left: 8px;
+}
+
+@media only screen and (max-width: 40em) {
+	.cpc-control-select {
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+	}
+}
+
+label{
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  color: #333333;
+}
+label + .cpc-control-select {
+  margin-top: 1px !important;
+}
+
+ .cpc-control-select.disabled .cpc-control-select__toggle {
+	 border: solid 1px #666;
+	 background-color: #f0f0f0;
+	 color: #666;
+
+}
+.cpc-control-select button.cpc-control-select__toggle:hover,  
+.cpc-control-select.disabled .cpc-control-select__toggle:hover, 
+ .cpc-control-select.disabled .cpc-control-select__toggle:focus {
+	 outline: none !important;
+	 -webkit-box-shadow: none;
+	 -moz-box-shadow: none;
+	 box-shadow: none !important;
+	 border: solid 1px #666 !important;
+}
+ .cpc-control-select.disabled .cpc-control-select__toggle .cpc-control-select__toggle-indicator {
+	 border-top-color: #888 !important;
+}
+ .cpc-control-select button.cpc-control-select__toggle {
+	 font-family: Roboto;
+	 font-size: 16px;
+	 font-weight: 300;
+	 font-stretch: normal;
+	 font-style: normal;
+	 line-height: 1.5;
+	 letter-spacing: 0.5px;
+	 color: #333;
+	 position: relative;
+	 height: 44px;
+	 max-height: 44px;
+	 width: 100% !important;
+	 border-radius: 2px;
+	 border: solid 1px #666 !important;
+	 background-color: #fff;
+	 padding: 10px 16px !important;
+	 max-width: 368px;
+	 /* min-width: 79px; */
+	 text-align: left;
+}
+
+.cpc-control-select button.small-width{
+	width: 79px !important;
+	height: 44px !important;
+}
+.cpc-control-select__combo{
+	width: 79px !important;
+}
+
+ .cpc-control-select button.cpc-control-select__toggle:focus {
+	 outline: none !important;
+	 border: 1px solid #0467c6 !important;
+	 -webkit-box-shadow: inset 1px 1px 0px 0px #0467c6, inset -1px -1px 0px 0px #0467c6 !important;
+	 -moz-box-shadow: inset 1px 1px 0px 0px #0467c6, inset -1px -1px 0px 0px #0467c6 !important;
+	 box-shadow: inset 1px 1px 0px 0px #0467c6, inset -1px -1px 0px 0px #0467c6 !important;
+}
+ .cpc-control-select button.cpc-control-select__toggle.error {
+	 border: 1px solid #ca261a !important;
+}
+ .cpc-control-select button.cpc-control-select__toggle.error:focus {
+	 outline: none !important;
+	 -webkit-box-shadow: inset 1px 1px 0px 0px #ca261a, inset -1px -1px 0px 0px #ca261a !important;
+	 -moz-box-shadow: inset 1px 1px 0px 0px #ca261a, inset -1px -1px 0px 0px #ca261a !important;
+	 box-shadow: inset 1px 1px 0px 0px #ca261a, inset -1px -1px 0px 0px #ca261a !important;
+}
+ .cpc-control-select button.cpc-control-select__toggle > span:first-child {
+	 white-space: nowrap;
+	 width: 100%;
+	 display: block;
+	 overflow: hidden;
+	 text-align: left;
+}
+ .cpc-control-select button.cpc-control-select__toggle .cpc-control-select__toggle-indicator {
+	 position: absolute;
+	 right: 15px;
+	 top: 17px;
+	 background: url("../img/icons/drop-down-arrow.svg") center 50% no-repeat;
+	 width: 12px;
+	 height: 8px;
+	 transition: transform 0.4s;
+	 border: none;
+}
+
+.cpc-control-select .cpc-control-select__combo::-webkit-scrollbar {
+	 width: 14px;
+}
+ .cpc-control-select .cpc-control-select__combo {
+	 --scrollbarBG: #fff;
+	 --thumbBG: #888;
+	 scrollbar-width: thin;
+	 scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+ .cpc-control-select .cpc-control-select__combo::-webkit-scrollbar-track {
+	 background: var(--scrollbarBG);
+	 margin-top: 5px;
+}
+ .cpc-control-select .cpc-control-select__combo::-webkit-scrollbar-thumb {
+	 background-color: #888;
+	 border: 4px solid #fff;
+	 border-radius: 100px;
+}
+ .cpc-control-select .cpc-control-select__combo {
+	 display: none;
+	 z-index: 999999;
+	 opacity: 1;
+	 position: absolute;
+	 left: 0;
+	 right: 0;
+	 max-width: 368px;
+	 width: 100%;
+	 
+	 background-color: white;
+	 border: 1px solid #666;
+	 overflow: auto;
+	 height: auto;
+	 text-align: left;
+	 border-radius: 2px;
+	 -webkit-box-shadow: 0 3px 8px 0 rgba(17, 17, 17, 0.13);
+	 -moz-box-shadow: 0 3px 8px 0 rgba(17, 17, 17, 0.13);
+	 box-shadow: 0 3px 8px 0 rgba(17, 17, 17, 0.13);	 
+}
+
+@media only screen and (max-width: 40em) {
+	.cpc-control-select .cpc-control-select__combo {
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	}
+}
+ .cpc-control-select.cpc-control-select--open .cpc-control-select__toggle:focus {
+	 outline: none !important;
+	 border: 1px solid #666 !important;
+	 -webkit-box-shadow: none;
+	 -moz-box-shadow: none;
+	 box-shadow: none !important;
+}
+ .cpc-control-select.cpc-control-select--open .cpc-control-select__toggle.error:focus {
+	 outline: none;
+	 border: 1px solid #ca261a;
+	 -webkit-box-shadow: none;
+	 -moz-box-shadow: none;
+	 box-shadow: none;
+}
+ .cpc-control-select.cpc-control-select--open .cpc-control-select__combo {
+	 display: inherit;
+}
+ .cpc-control-select.cpc-control-select--open .cpc-control-select__combo.openBelow {
+	 border-top-left-radius: 0px;
+	 border-top-right-radius: 0px;
+	 border-top: 0px;
+}
+ .cpc-control-select.cpc-control-select--open .cpc-control-select__combo.openUp {
+	 border-bottom-left-radius: 0px;
+	 border-bottom-right-radius: 0px;
+	 border-bottom: 0px;
+}
+ .cpc-control-select.cpc-control-select--open button.cpc-control-select__toggle.openBelow {
+	 border-bottom-left-radius: 0px;
+	 border-bottom-right-radius: 0px;
+}
+ .cpc-control-select.cpc-control-select--open button.cpc-control-select__toggle.openUp {
+	 border-top-left-radius: 0px;
+	 border-top-right-radius: 0px;
+}
+ .cpc-control-select.cpc-control-select--open button.cpc-control-select__toggle.error.openBelow {
+	 border-bottom-left-radius: 0px;
+	 border-bottom-right-radius: 0px;
+	 border-bottom: 1px solid #666666 !important;
+}
+ .cpc-control-select.cpc-control-select--open button.cpc-control-select__toggle.error.openUp {
+	 border-top-left-radius: 0px;
+	 border-top-right-radius: 0px;
+	 border-top: 1px solid #666666 !important;
+}
+ .cpc-control-select.cpc-control-select--open .cpc-control-select__toggle-indicator {
+	 transform: rotate(-180deg);
+}
+ .cpc-control-select ul {
+	 list-style: none;
+   margin: 0;
+   padding-left: 0;
+}
+ .cpc-control-select ul li {
+	 height: 40px;
+	 padding: 8px 15px;
+	 margin-bottom: 0;
+	 font-family: Roboto;
+	 font-size: 16px;
+	 font-weight: 300;
+	 font-stretch: normal;
+	 font-style: normal;
+	 line-height: 1.5;
+	 letter-spacing: 0.5px;
+	 color: #333;
+}
+ .cpc-control-select ul li span {
+	 overflow: hidden;
+	 width: 100%;
+	 display: inline-block;
+}
+ .cpc-control-select ul li.selected, .cpc-control-select ul li:focus, .cpc-control-select ul li:hover, .cpc-control-select ul li.selected span, .cpc-control-select ul li:focus span, .cpc-control-select ul li:hover span {
+	 background-color: #0467c6 !important;
+	 color: #fff;
+	 outline: none !important;
+	 font-weight: 400;
+}
+ select.cpc-control-select__tpl {
+	 display: none;
+}
+.ds-error {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #ca261a;
+  text-align: left;
+  display: block;
+  margin-top: 4px;
+
+  background-image: url('../img/icons/red-alert.svg');
+  background-repeat: no-repeat;
+  padding-left: 32px;
+}
+ 
